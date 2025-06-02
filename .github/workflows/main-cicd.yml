@@ -74,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .  # Direktori root proyek sebagai konteks
-          file: ./Dockerfile  # Path ke file Dockerfile di dalam konteks
+          file: ./Dockerfile/Dockerfile  # Path ke file Dockerfile di dalam konteks
           push: false
           tags: local/kalkulator-cicd:latest
 
