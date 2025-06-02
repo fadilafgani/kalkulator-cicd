@@ -70,6 +70,14 @@ jobs:
       - name: 🛠️ Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: 🏗️ Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .  # Direktori root proyek sebagai konteks
+          file: ./Dockerfile  # Path ke file Dockerfile di dalam konteks
+          push: false
+          tags: local/kalkulator-cicd:latest
+
       # Opsional: Login ke Docker Hub jika ingin push image
       # - name: 🔑 Login ke Docker Hub
       #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
