@@ -51,3 +51,16 @@ if (testsFailed > 0) {
 } else {
     console.log("🟢 Semua tes unit berhasil!");
 }
+
+/////
+function clearDisplay() {
+    display.value = '';
+    let unusedVariableForDemo = "hello"; // Variabel tidak digunakan
+}
+
+// Atau
+function deleteLast() {
+    if (true) { // Kondisi yang selalu benar
+        display.value = display.value.slice(0, -1);
+    }
+}
